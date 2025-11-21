@@ -78,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
                 // Por enquanto, faremos uma simulação de sucesso:
                 handleLoginSuccess()
             } else {
-                // O botão não deveria estar habilitado, mas é um fallback
+                // fallback
                 textInputEmail.error = if (!isValidEmail(email)) "E-mail inválido." else null
                 textInputPassword.error = if (password.length < 6) "Senha deve ter 6+ caracteres." else null
             }

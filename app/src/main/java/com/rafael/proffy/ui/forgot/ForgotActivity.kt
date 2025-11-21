@@ -55,7 +55,6 @@ class ForgotActivity : AppCompatActivity() {
             setButtonState(isValidEmail, enabledButtonColor, disabledButtonColor)
         }
 
-        // ✅ CORREÇÃO ESSENCIAL: Garante que o estado inicial seja definido.
         // Se o campo estiver vazio, o botão começará desabilitado (apagado).
         editTextEmail.text?.let {
             val email = it.toString().trim()
@@ -70,7 +69,7 @@ class ForgotActivity : AppCompatActivity() {
 
             if (isValidEmail(email)) {
 
-                // Redirecionamento para a FinallyActivity (Trabalho concluído!)
+                // Redirecionamento para a FinallyActivity
                 val title = "Redefinição enviada!"
                 val subtitle = "Boa, agora é só checar o e-mail que foi enviado para você redefinir sua senha e aproveitar os estudos."
                 val buttonText = "Voltar ao login"

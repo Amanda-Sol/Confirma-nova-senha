@@ -30,10 +30,10 @@ class FinallyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Certifique-se de que o activity_finally.xml está no seu diretório res/layout
+
         setContentView(R.layout.activity_finally)
 
-        // Definir a cor da Status Bar como purple (cor de fundo)
+        // Define a cor da Status Bar como purple (cor de fundo)
         WindowCompat.getInsetsController(window, window.decorView)?.isAppearanceLightStatusBars = false // Mantém os ícones claros
         window.statusBarColor = ContextCompat.getColor(this, R.color.purple)
         // 1. Receber os parâmetros da Intent
@@ -41,17 +41,17 @@ class FinallyActivity : AppCompatActivity() {
         val subtitle = intent.getStringExtra(EXTRA_SUBTITLE)
         val buttonText = intent.getStringExtra(EXTRA_BUTTON_TEXT)
 
-        // 2. Localizar os componentes da UI
+        // 2. Localiza os componentes da UI
         val tvTitle: TextView = findViewById(R.id.finally_tv_title)
         val tvSubtitle: TextView = findViewById(R.id.finally_tv_subtitle)
         val btnAction: Button = findViewById(R.id.finally_btn_action)
 
-        // 3. Personalizar a tela
+        // 3. Personaliza a tela
         tvTitle.text = title
         tvSubtitle.text = subtitle
         btnAction.text = buttonText
 
-        // 4. Configurar a ação do botão: Redirecionar para Login
+        // 4. Configura a ação do botão: Redirecionar para Login
         btnAction.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java).apply {
                 // Limpa o back stack: o usuário não pode voltar para as telas de sucesso/cadastro/forgot
