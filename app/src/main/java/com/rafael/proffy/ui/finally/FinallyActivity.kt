@@ -1,4 +1,4 @@
-package com.rafael.proffy.ui.finally // Novo pacote sugerido
+package com.rafael.proffy.ui.finally
 
 import android.content.Context
 import android.content.Intent
